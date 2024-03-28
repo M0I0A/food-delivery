@@ -1,0 +1,26 @@
+{
+  "name": "food-delivery",
+  "version": "1.0.0",
+  "description": "This is a backend application for a food delivery service that calculates the delivery price based on various factors such as distance, item type, and pricing structure of the organization.",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.3",
+    "sequelize": "^6.37.1",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}

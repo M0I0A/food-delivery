@@ -1,0 +1,88 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Food Delivery API",
+      "version": "1.0.0",
+      "description": "API documentation for the Food Delivery application"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000"
+      }
+    ],
+    "paths": {
+      "/api/pricing/calculate-delivery-price": {
+        "post": {
+          "summary": "Calculate delivery price",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "zone": {
+                      "type": "string",
+                      "example": "central"
+                    },
+                    "organizationId": {
+                      "type": "string",
+                      "example": "005"
+                    },
+                    "totalDistance": {
+                      "type": "number",
+                      "example": 12
+                    },
+                    "itemType": {
+                      "type": "string",
+                      "example": "perishable"
+                    }
+                  },
+                  "required": [
+                    "zone",
+                    "organizationId",
+                    "totalDistance",
+                    "itemType"
+                  ]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "totalPrice": {
+                        "type": "number",
+                        "example": 20.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "error": {
+                        "type": "string",
+                        "example": "Invalid item type"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
