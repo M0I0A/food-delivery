@@ -53,7 +53,7 @@ npm run lint:fix
 
 ## Deployment
 
-The application is deployed on Render.com. You can access the live API at [deployed_url].
+The application is deployed on Render.com. You can access the live API at https://food-delivery-y2ra.onrender.com/.
 
 This solution covers the following:
 
