@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
       },
       organizationId: {
-        type: DataTypes.UUID,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
           model: 'Organizations',
