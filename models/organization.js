@@ -1,9 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     const Organization = sequelize.define('Organization', {
       id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        type: DataTypes.INTEGER,
+        // defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
+        allowNull:false
       },
       name: {
         type: DataTypes.STRING,
