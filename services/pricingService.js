@@ -25,9 +25,9 @@ const calculateDeliveryPrice = async (request) => {
 
   const { baseDistanceInKm, kmPrice, fixPrice } = pricing;
   const distanceBeyondBase = Math.max(0, totalDistance - baseDistanceInKm);
-  const totalPrice = fixPrice + (distanceBeyondBase * kmPrice * 100);
+  const totalPrice = fixPrice + (distanceBeyondBase * kmPrice );
 
-  return { totalPrice: totalPrice / 100 };
+  return { totalPrice: totalPrice  };
 };
 
 module.exports = { calculateDeliveryPrice };
